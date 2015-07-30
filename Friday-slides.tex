@@ -1,0 +1,536 @@
+\documentclass[xcolor=dvipsnames]{beamer}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{palatino}
+\usepackage{beamerthemesplit}
+\usefonttheme{serif}
+\mode<presentation> { 
+\usetheme{Szeged} 
+\setbeamercovered{transparent} 
+} 
+\setbeamertemplate{footline}[frame number]
+%\useoutertheme{infolines} 
+\usecolortheme{dolphin} 
+\usecolortheme{orchid}
+\usecolortheme[named=MidnightBlue]{structure}
+
+\usepackage{color}
+\setbeamercolor{alerted text}{fg=OrangeRed}
+\setbeamercovered{invisible}
+
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{booktabs}
+\usepackage{linguex}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,fit}
+
+\usepackage{natbib}
+\newcommand{\citeposs}[2][]{\citeauthor{#2}'s (\citeyear[#1]{#2})}
+\bibpunct[:]{(}{)}{;}{a}{}{,}
+
+
+\include{sem}
+%\include{gloss}
+\def\bad{\leavevmode\llap{*}}
+\def\jg#1{\leavevmode\llap{#1}}
+\def\sk#1{\setbox1\hbox{#1}\rule[.5ex]{\wd1}{.4pt}\hspace*{-\wd1}{\box1}}
+\newcommand{\myalt}[2]{$\left\{\begin{array}{l}\textnormal{#1}\\\textnormal{#2}\end{array}\right\}$}
+\usepackage{qtree}
+
+
+\title{Adverbial Superlatives}
+\author[Comparatives Group]{Liz, Tim, Greg, and Andrea}
+\institute{SIASSI Summer Institute 2015}
+%\date{Sinn und Bedeutung 2014}
+\begin{document}
+
+\frame{\titlepage}
+
+
+
+\begin{frame}{Adverbial superlatives}
+
+\ex. John ran (the) fastest.
+
+Questions:
+\begin{itemize}
+\item Why can we have {\em the} (in English) (but not German)? 
+\item Is it freely insertable and if so why?
+\item Do adverbial superlatives have both absolute and relative
+  readings?
+\item How to analyze the elements involved? Do adverbial superlatives
+  help to decide between analyses of adjectival superlatives?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Previous work}
+\citet{krasikova:2012}:
+
+\begin{itemize}
+\item ``One of the two remaining issues to be addressed is the
+  optionality of {\em the} in adverbial and predicative
+  superlatives.''
+\item ``Under the present analysis, both an absolute and a
+  comparative construal are possible in such cases and derive the same
+  truth conditions.''
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Syntactic restrictions}
+
+\ex.
+\a. John carefully opened the window.
+\b. John opened the window carefully.
+
+\ex.
+\a. John ran (the) fastest.
+\b. *John (the) fastest drove.
+
+\end{frame}
+
+
+\begin{frame}{Focus-sensitivity}
+
+
+\ex. John$_F$ ran the fastest on Tuesday.
+
+\ex. John ran the fastest on Tuesday$_F$.
+
+\end{frame}
+
+
+\begin{frame}{Cf.\ relative readings of adnominal superlatives}
+
+\ex. {Of her 3 sisters, [Jean]$_F$ bought the most expensive
+  book. \label{deg-rel}}
+
+\ex. {There was the least snow on [Tuesday]$_F$. \label{snow}}
+
+\ex. {Who received the fewest letters? \label{wh}}
+
+\ex. {The one who receives the most votes wins. \label{rel}}
+
+\ex. {A: How do you win this contest?\\B: By [ PRO putting the tallest
+  plant on the table ]. \label{pro}}
+
+\end{frame}
+
+
+
+\begin{frame}{Anatomy of a relative reading}
+
+\begin{center}
+\begin{tikzpicture}
+%put some nodes on the left
+\foreach \x in {1,2,3}{
+\node[fill,blue,circle,inner sep=2pt] (d\x) at (0,\x) {};
+}
+\node[fit=(d1) (d2) (d3),ellipse,draw,minimum width=1cm,label={[label
+  distance=.3cm,blue]90:contrast set},label={[label
+  distance=.6cm,purple]270:association relation},draw=blue] {}; 
+%put some nodes on the center
+\foreach \x[count=\xi] in {0.5,1.5,...,4}{
+\node[fill,ForestGreen,circle,inner sep=2pt] (r\xi) at (2,\x) {};
+}
+
+\node[fit=(r1) (r2) (r3) (r4),ellipse,draw,minimum width=1.5cm,draw=ForestGreen,label={[label
+  distance=.3cm,ForestGreen]90:measured entities},label={[label
+  distance=.3cm,orange]280:measure}] {}; 
+
+%put some nodes on the right
+\foreach \x[count=\xi] in {0.75,1.5,...,3}{
+\node[fill,red,circle,inner sep=2pt] (c\xi) at (4,\x) {};
+}
+\node[fit=(c1) (c2) (c3) (c4) ,ellipse,draw,minimum width=1.5cm,label={[label
+  distance=.3cm,red]90:degrees},draw=red] {};
+\draw[-latex,purple] (d1) -- (r1);
+\draw[-latex,purple] (d1) -- (r2);
+\draw[-latex,purple] (d2) -- (r2);
+\draw[-latex,purple] (d3) -- (r3);
+\draw[-latex,purple] (d3) -- (r4);
+
+
+\draw[-latex,orange] (r1) -- (c2);
+\draw[-latex,orange] (r2) -- (c3);
+\draw[-latex,orange] (r3) -- (c3);
+\draw[-latex,orange] (r4) -- (c4);
+
+
+\end{tikzpicture}
+\end{center}
+
+\end{frame}
+
+\begin{frame}{\textcolor{blue}{John}$_F$ \textcolor{purple}{climbed}
+    the \textcolor{orange}{high}est \textcolor{ForestGreen}{mountain}:
+  Relative reading}
+
+\begin{center}
+\begin{tikzpicture}
+%put some nodes on the left
+\foreach \x in {1,2,3}{
+\node[fill,blue,circle,inner sep=2pt] (d\x) at (0,\x) {};
+}
+\node[fit=(d1) (d2) (d3),ellipse,draw,minimum width=1cm,label={[label
+  distance=.3cm,blue]90:climbers},label={[label
+  distance=.6cm,purple]270:$x$ climbed $y$},draw=blue] {}; 
+%put some nodes on the center
+\foreach \x[count=\xi] in {0.5,1.5,...,4}{
+\node[fill,ForestGreen,circle,inner sep=2pt] (r\xi) at (2,\x) {};
+}
+
+\node[fit=(r1) (r2) (r3) (r4),ellipse,draw,minimum width=1.5cm,draw=ForestGreen,label={[label
+  distance=.3cm,ForestGreen]90:climbed mountains},label={[label
+  distance=.3cm,orange]280:$y$ is $d$-high}] {}; 
+
+%put some nodes on the right
+\foreach \x[count=\xi] in {0.75,1.5,...,3}{
+\node[fill,red,circle,inner sep=2pt] (c\xi) at (4,\x) {};
+}
+\node[fit=(c1) (c2) (c3) (c4) ,ellipse,draw,minimum width=1.5cm,label={[label
+  distance=.3cm,red]90:degrees},draw=red] {};
+\draw[-latex,purple] (d1) -- (r1);
+\draw[-latex,purple] (d1) -- (r2);
+\draw[-latex,purple] (d2) -- (r2);
+\draw[-latex,purple] (d3) -- (r3);
+\draw[-latex,purple] (d3) -- (r4);
+
+
+\draw[-latex,orange] (r1) -- (c2);
+\draw[-latex,orange] (r2) -- (c3);
+\draw[-latex,orange] (r3) -- (c3);
+\draw[-latex,orange] (r4) -- (c4);
+
+
+\end{tikzpicture}
+\end{center}
+
+\end{frame}
+
+
+
+\begin{frame}{\textcolor{purple}{John climbed}
+    the \textcolor{orange}{high}est \textcolor{ForestGreen}{mountain}
+    \textcolor{purple}{on} \textcolor{blue}{Tuesday}}
+
+\begin{center}
+\begin{tikzpicture}
+%put some nodes on the left
+\foreach \x in {1,2,3}{
+\node[fill,blue,circle,inner sep=2pt] (d\x) at (0,\x) {};
+}
+\node[fit=(d1) (d2) (d3),ellipse,draw,minimum width=1cm,label={[label
+  distance=.3cm,blue]90:days},label={[label
+  distance=.6cm,purple]270:John climbed $y$ on $x$},draw=blue] {}; 
+%put some nodes on the center
+\foreach \x[count=\xi] in {0.5,1.5,...,4}{
+\node[fill,ForestGreen,circle,inner sep=2pt] (r\xi) at (2,\x) {};
+}
+
+\node[fit=(r1) (r2) (r3) (r4),ellipse,draw,minimum width=1.5cm,draw=ForestGreen,label={[label
+  distance=.3cm,ForestGreen]90:climbed mountains},label={[label
+  distance=.3cm,orange]280:$y$ is $d$-high}] {}; 
+
+%put some nodes on the right
+\foreach \x[count=\xi] in {0.75,1.5,...,3}{
+\node[fill,red,circle,inner sep=2pt] (c\xi) at (4,\x) {};
+}
+\node[fit=(c1) (c2) (c3) (c4) ,ellipse,draw,minimum width=1.5cm,label={[label
+  distance=.3cm,red]90:degrees},draw=red] {};
+\draw[-latex,purple] (d1) -- (r1);
+\draw[-latex,purple] (d1) -- (r2);
+\draw[-latex,purple] (d2) -- (r2);
+\draw[-latex,purple] (d3) -- (r3);
+\draw[-latex,purple] (d3) -- (r4);
+
+
+\draw[-latex,orange] (r1) -- (c2);
+\draw[-latex,orange] (r2) -- (c3);
+\draw[-latex,orange] (r3) -- (c3);
+\draw[-latex,orange] (r4) -- (c4);
+
+
+\end{tikzpicture}
+\end{center}
+
+\end{frame}
+
+\begin{frame}{Recipe for a relative reading (requires focus)}
+\begin{itemize}
+\item The \textcolor{orange}{measure} is whatever the superlative
+  morpheme attaches to.
+\item The \textcolor{purple}{association relation} can be derived by
+abstracting over the focus and the phrase containing the both the superlative
+expression and the property it modifies.
+\item The \textcolor{blue}{contrast set} is (a contextually restricted
+  subset of) the focus alternatives.
+\item The \textcolor{ForestGreen}{measured entities} are the members of the range of the
+  association relation (the set of $y$s such that $xRy$). They are
+  drawn from a \textcolor{ForestGreen}{domain} given by the phrase the
+  superlative expression modifies.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{\textcolor{blue}{John}$_F$ \textcolor{ForestGreen}{drove}
+    the \textcolor{orange}{fast}est:
+  Relative reading}
+
+\begin{center}
+\begin{tikzpicture}
+%put some nodes on the left
+\foreach \x in {1,2,3}{
+\node[fill,blue,circle,inner sep=2pt] (d\x) at (0,\x) {};
+}
+\node[fit=(d1) (d2) (d3),ellipse,draw,minimum width=1cm,label={[label
+  distance=.3cm,blue]90:drivers},label={[label
+  distance=.6cm,purple]270:$x$ is the agent of $y$},draw=blue] {}; 
+%put some nodes on the center
+\foreach \x[count=\xi] in {0.5,1.5,...,4}{
+\node[fill,ForestGreen,circle,inner sep=2pt] (r\xi) at (2,\x) {};
+}
+
+\node[fit=(r1) (r2) (r3) (r4),ellipse,draw,minimum width=1.5cm,draw=ForestGreen,label={[label
+  distance=.3cm,ForestGreen]90:driving events},label={[label
+  distance=.3cm,orange]280:$y$ is $d$-fast}] {}; 
+
+%put some nodes on the right
+\foreach \x[count=\xi] in {0.75,1.5,...,3}{
+\node[fill,red,circle,inner sep=2pt] (c\xi) at (4,\x) {};
+}
+\node[fit=(c1) (c2) (c3) (c4) ,ellipse,draw,minimum width=1.5cm,label={[label
+  distance=.3cm,red]90:degrees},draw=red] {};
+\draw[-latex,purple] (d1) -- (r1);
+\draw[-latex,purple] (d1) -- (r2);
+\draw[-latex,purple] (d2) -- (r2);
+\draw[-latex,purple] (d3) -- (r3);
+\draw[-latex,purple] (d3) -- (r4);
+
+
+\draw[-latex,orange] (r1) -- (c2);
+\draw[-latex,orange] (r2) -- (c3);
+\draw[-latex,orange] (r3) -- (c3);
+\draw[-latex,orange] (r4) -- (c4);
+
+
+\end{tikzpicture}
+\end{center}
+
+\end{frame}
+
+
+
+
+\begin{frame}{John climbed the highest mountain: Absolute reading}
+
+\begin{center}
+\begin{tikzpicture}
+%put some nodes on the left
+\foreach \x in {1,2,3}{
+\node[fill,blue,circle,inner sep=2pt] (d\x) at (0,\x) {};
+}
+\node[fit=(d1) (d2) (d3),ellipse,draw,minimum width=1cm,label={[label
+  distance=.3cm,blue]90:mountains},label={[label
+  distance=.6cm,purple]280:$x=y$},draw=blue] {}; 
+%put some nodes on the center
+
+\foreach \x in {1,2,3}{
+\node[fill,ForestGreen,circle,inner sep=2pt] (r\x) at (2,\x) {};
+}
+\node[fit=(r1) (r2) (r3) ,ellipse,draw,minimum width=1.5cm,draw=ForestGreen,label={[label
+  distance=.3cm,ForestGreen]90:mountains},label={[label
+  distance=.3cm,orange]276:$y$ is $d$-high}] {}; 
+
+%put some nodes on the right
+\foreach \x[count=\xi] in {0.75,1.5,...,3}{
+\node[fill,red,circle,inner sep=2pt] (c\xi) at (4,\x) {};
+}
+\node[fit=(c1) (c2) (c3) (c4) ,ellipse,draw,minimum width=1.5cm,label={[label
+  distance=.3cm,red]90:degrees},draw=red] {};
+\draw[-latex,purple] (d1) -- (r1);
+\draw[-latex,purple] (d2) -- (r2);
+\draw[-latex,purple] (d3) -- (r3);
+
+
+\draw[-latex,orange] (r1) -- (c2);
+\draw[-latex,orange] (r2) -- (c3);
+\draw[-latex,orange] (r3) -- (c3);
+%\draw[-latex,orange] (r4) -- (c4);
+
+
+\end{tikzpicture}
+\end{center}
+
+\end{frame}
+
+
+%\node[fit=(r1) (r2) (r3) (r4),ellipse,draw,minimum width=1.5cm},draw=ForestGreen] {}; 
+
+
+\begin{frame}{Recipe for an absolute reading}
+\begin{itemize}
+\item The \textcolor{orange}{measure} is whatever the superlative
+  morpheme attaches to.
+\item The \textcolor{purple}{association relation} is equality.
+\item The \textcolor{blue}{contrast set} collapses with the set of
+  measured entities.
+\item The \textcolor{ForestGreen}{measured entities} are
+  drawn from a \textcolor{ForestGreen}{domain} given by the phrase the
+  superlative expression modifies.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Do adverbial superlatives have absolute readings?}
+
+\ex. John ran the fastest.
+
+Two imaginable absolute readings:
+\begin{itemize}
+\item John was the agent of running event $e$, and $e$ had a speed
+  that was greater than all other speeds in the context.
+\item John was the agent of running event $e$, and $e$ was faster than
+  all other running events in the context.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{John drove the fastest: Absolute reading (I)}
+
+\begin{center}
+\begin{tikzpicture}
+%put some nodes on the left
+\foreach \x in {1,2,3}{
+\node[fill,blue,circle,inner sep=2pt] (d\x) at (0,\x) {};
+}
+\node[fit=(d1) (d2) (d3),ellipse,draw,minimum width=1cm,label={[label
+  distance=.3cm,blue]90:speeds},label={[label
+  distance=.6cm,purple]280:$x=y$},draw=blue] {}; 
+%put some nodes on the center
+
+\foreach \x in {1,2,3}{
+\node[fill,ForestGreen,circle,inner sep=2pt] (r\x) at (2,\x) {};
+}
+\node[fit=(r1) (r2) (r3) ,ellipse,draw,minimum width=1.5cm,draw=ForestGreen,label={[label
+  distance=.3cm,ForestGreen]90:speeds},label={[label
+  distance=.3cm,orange]276:$y=d$}] {}; 
+
+%put some nodes on the right
+\foreach \x[count=\xi] in {0.75,1.5,...,3}{
+\node[fill,red,circle,inner sep=2pt] (c\xi) at (4,\x) {};
+}
+\node[fit=(c1) (c2) (c3) (c4) ,ellipse,draw,minimum width=1.5cm,label={[label
+  distance=.3cm,red]90:degrees},draw=red] {};
+\draw[-latex,purple] (d1) -- (r1);
+\draw[-latex,purple] (d2) -- (r2);
+\draw[-latex,purple] (d3) -- (r3);
+
+
+\draw[-latex,orange] (r1) -- (c2);
+\draw[-latex,orange] (r2) -- (c3);
+\draw[-latex,orange] (r3) -- (c4);
+%\draw[-latex,orange] (r4) -- (c4);
+
+
+\end{tikzpicture}
+\end{center}
+
+\end{frame}
+
+
+\begin{frame}{Private driving tutor scenario}
+
+  John has a private driving tutor. The tutor says that John can
+  choose to drive 40mph, 50mph, or 60mph. John was unsure which to
+  choose, but in the end...
+
+\ex.
+\a. {...he drove the fastest speed.\label{tutor-the-fastest-speed}}
+\b. {*...he drove fastest.\label{tutor-fastest}}
+\c. {?...he drove the fastest.\label{tutor-the-fastest}}
+\d. {...of the given speeds, he drove the
+    fastest.\label{tutor-the-fastest-of}}
+
+\end{frame}
+
+
+\begin{frame}{John drove the fastest: Absolute reading (II)}
+
+\begin{center}
+\begin{tikzpicture}
+%put some nodes on the left
+\foreach \x in {1,2,3}{
+\node[fill,blue,circle,inner sep=2pt] (d\x) at (0,\x) {};
+}
+\node[fit=(d1) (d2) (d3),ellipse,draw,minimum width=1cm,label={[label
+  distance=.3cm,blue]90:drivings},label={[label
+  distance=.6cm,purple]280:$x=y$},draw=blue] {}; 
+%put some nodes on the center
+
+\foreach \x in {1,2,3}{
+\node[fill,ForestGreen,circle,inner sep=2pt] (r\x) at (2,\x) {};
+}
+\node[fit=(r1) (r2) (r3) ,ellipse,draw,minimum width=1.5cm,draw=ForestGreen,label={[label
+  distance=.3cm,ForestGreen]90:drivings},label={[label
+  distance=.3cm,orange]276:$y$ is $d$-fast}] {}; 
+
+%put some nodes on the right
+\foreach \x[count=\xi] in {0.75,1.5,...,3}{
+\node[fill,red,circle,inner sep=2pt] (c\xi) at (4,\x) {};
+}
+\node[fit=(c1) (c2) (c3) (c4) ,ellipse,draw,minimum width=1.5cm,label={[label
+  distance=.3cm,red]90:degrees},draw=red] {};
+\draw[-latex,purple] (d1) -- (r1);
+\draw[-latex,purple] (d2) -- (r2);
+\draw[-latex,purple] (d3) -- (r3);
+
+
+\draw[-latex,orange] (r1) -- (c2);
+\draw[-latex,orange] (r2) -- (c3);
+\draw[-latex,orange] (r3) -- (c3);
+%\draw[-latex,orange] (r4) -- (c4);
+
+
+\end{tikzpicture}
+\end{center}
+
+\end{frame}
+
+
+\begin{frame}{Driving practice scenario}
+
+John practiced driving on the slippery road three times today. The
+first time he drove 30mph, the second time he drove 40mph, and the
+third time he drove 50mph.
+
+\ex. \#John drove fastest.
+
+There must be another driver (or we're comparing driving to other
+modes of transportation).
+
+\end{frame}
+
+\begin{frame}{Conclusion}
+
+\begin{itemize}
+\item Adverbial superlatives do not have absolute readings.
+\item Why? Perhaps the contrast set must consist of suitably
+  individuable entities. Events are not suitably individuable.
+\end{itemize}
+
+\end{frame}
+
+
+
+%\begin{frame}
+\small
+\bibliographystyle{sp}
+\bibliography{master}
+%\end{frame}
+
+\end{document}

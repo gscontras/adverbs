@@ -1,0 +1,87 @@
+% gloss.tex
+% macros for glosses and f-structures
+
+\newenvironment{gloss}
+{\begin{tabular}[t]{*{20}{@{\hspace{0pt}}l@{~}}}}
+  {\end{tabular}}
+\newcommand{\trans}[1]{\multicolumn{20}{@{\hspace{0pt}}l}{`#1'}}
+
+\def\cat#1{$_\textnormal{\sc #1}$}
+\def\vset#1{$\left\{{#1}\right\}$}
+
+%features
+
+\newcommand{\sg}{\textnormal{{\sc sg}}}
+\newcommand{\pl}{\textnormal{{\sc pl}}}
+\newcommand{\du}{\textnormal{{\sc du}}}
+
+\newcommand{\fem}{{\sc fem}}
+\newcommand{\masc}{{\sc masc}}
+
+\newcommand{\nom}{{\sc nom}}
+\newcommand{\dat}{{\sc dat}}
+\newcommand{\acc}{{\sc acc}}
+\newcommand{\gen}{{\sc gen}}
+\newcommand{\erg}{{\sc erg}}
+\newcommand{\abs}{{\sc abs}}
+\newcommand{\instr}{\sc instr}
+\newcommand{\poss}{{\sc poss}}
+\newcommand{\caus}{{\sc caus}}
+\newcommand{\loc}{{\sc loc}}
+
+\newcommand{\defn}{{\sc def}}
+\newcommand{\indef}{{\sc indef}}
+
+\newcommand{\past}{{\sc past}}
+\newcommand{\pres}{{\sc pres}}
+\newcommand{\perf}{{\sc perf}}
+\newcommand{\fut}{{\sc fut}}
+\newcommand{\pot}{{\sc pot}}
+\newcommand{\cnd}{{\sc cond}}
+\newcommand{\sbj}{{\sc sbj}}
+
+\newcommand{\infin}{{\sc inf}}
+
+\newcommand{\cont}{{\sc cont}} % continuous aspect
+\newcommand{\fv}{\sc fv} % final vowel (Bantu, indicative mood marker?)
+
+\newcommand{\cl}{{\sc cl}} %class
+
+\newcommand{\supr}{{\sc sup}}
+\newcommand{\compr}{\textsc{comp}}
+
+\newcommand{\wk}{{\sc w}}
+
+\newcommand{\utr}{{\sc utr}}
+\newcommand{\neu}{{\sc neu}}
+
+\def\root{\raisebox{1ex}{$\sqrt{}$}}
+
+\newcommand{\short}{\textsc{short}}
+
+
+
+% attributes
+
+\newcommand{\num}{{\sc num}}
+\newcommand{\pers}{{\sc pers}}
+\newcommand{\gend}{{\sc gend}}
+%\newcommand{\case}{{\sc case}}
+\newcommand{\tense}{{\sc tense}}
+
+\newcommand{\pred}{{\sc pred}}
+\newcommand{\ind}{{\sc index}}
+
+\newcommand{\subj}{{\sc subj}}
+\newcommand{\obj}{{\sc obj}}
+\newcommand{\xcomp}{{\sc xcomp}}
+\newcommand{\comp}{{\sc comp}}
+\newcommand{\focus}{{\sc focus}}
+
+
+% arrows
+
+\newcommand{\up}[1]{$\uparrow${\sc #1}}
+\newcommand{\dn}[1]{$\downarrow${\sc #1}}
+\newcommand{\upisdn}{\up{}=\dn{}}
+
