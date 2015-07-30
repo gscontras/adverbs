@@ -2,6 +2,10 @@
 
 *.log
 
+*.aux
+
+*.nav
+
 *.dvi
 
 *.blg
@@ -13,3 +17,5 @@
 *.Rhistory
 
 *.pdf
+
+*.gz
