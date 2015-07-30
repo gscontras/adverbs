@@ -263,22 +263,36 @@ Questions:
 
 \end{frame}
 
-\begin{frame}{Recipe for a relative reading (requires focus)}
+\begin{frame}{Computing a relative reading (requires focus)}
 \begin{itemize}
-\item The \textcolor{orange}{measure} is whatever the superlative
-  morpheme attaches to.
-\item The \textcolor{purple}{association relation} can be derived by
-abstracting over the focus and the phrase containing the both the superlative
-expression and the property it modifies.
+\item The \textcolor{orange}{measure} is whatever {\em -est} attaches
+  to. \pause
+\item The \textcolor{purple}{association relation} (e.g.\ \textcolor{purple}{$x$ climbed $y$}) can be derived by
+abstracting over the focus (e.g.\ \textcolor{blue}{John}) and the XP containing the both the superlative
+expression and the property it modifies (e.g.\ the
+\textcolor{orange}{high}est \textcolor{ForestGreen}{mountain}). \pause
 \item The \textcolor{blue}{contrast set} is (a contextually restricted
-  subset of) the focus alternatives.
+  subset of) the focus alternatives. \pause
 \item The \textcolor{ForestGreen}{measured entities} are the members of the range of the
   association relation (the set of $y$s such that $xRy$). They are
   drawn from a \textcolor{ForestGreen}{domain} given by the phrase the
-  superlative expression modifies.
+  superlative expression modifies. \pause
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Calculating truth conditions}
+
+One way to do things:
+\begin{itemize}
+\item The superlative XP (e.g.\ {\em the highest mountain}) picks
+  out the measured entity whose measure is
+greater than that of any associate of any alternative to the focus in the contrast set.
+\item Truth conditions for {\em John$_F$ climbed the highest mountain}:\\
+John climbed a mountain that is higher than any mountain
+climbed by any alternative to John.
+\end{itemize}
+
+\end{frame}
 
 \begin{frame}{\textcolor{blue}{John}$_F$ \textcolor{ForestGreen}{drove}
     the \textcolor{orange}{fast}est:
@@ -375,17 +389,20 @@ expression and the property it modifies.
 %\node[fit=(r1) (r2) (r3) (r4),ellipse,draw,minimum width=1.5cm},draw=ForestGreen] {}; 
 
 
-\begin{frame}{Recipe for an absolute reading}
+\begin{frame}{Computing an absolute reading}
 \begin{itemize}
-\item The \textcolor{orange}{measure} is whatever the superlative
-  morpheme attaches to.
-\item The \textcolor{purple}{association relation} is equality.
+\item The \textcolor{orange}{measure} is whatever {\em -est} attaches to.
+\item The \textcolor{purple}{association relation} is {\em equality}.
 \item The \textcolor{blue}{contrast set} collapses with the set of
   measured entities.
 \item The \textcolor{ForestGreen}{measured entities} are
   drawn from a \textcolor{ForestGreen}{domain} given by the phrase the
   superlative expression modifies.
 \end{itemize}
+
+Superlative phrase picks out the entity with the greatest
+measure among the measured entities.
+
 \end{frame}
 
 
@@ -532,10 +549,9 @@ modes of transportation).
 
 
 
-%\begin{frame}
-\small
+\begin{frame}
 \bibliographystyle{sp}
 \bibliography{master}
-%\end{frame}
+\end{frame}
 
 \end{document}
