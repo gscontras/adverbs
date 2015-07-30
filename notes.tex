@@ -174,24 +174,35 @@ Compositional derivation:
 
 %%%%
 
-
-
-% to interpret a superlative sentence: 
-
-% first figure out ass'n rel'n via focus;
-% that gives you c.s. + m.e.; (by abstracting over their positions -
-% focus for the contrast set, and superlative phrase for the m.e.) 
-%      BUT if there is no focus, then a.r. defaults to =;
-%      = can't give you c.s. or m.e.; therefore
-%            you default to the NOUN's extension (some subset thereof)
-%            to give you both c.s. + m.e. and you then get an absolute
-%            reading;
-%            BUT if you cannot default to the noun b/c there is no noun
-%            (as is the case w adverbials and predicative),
-%                 THEN you cannot use = as a.r.; 
-%                 AND therefore cannot get an absolute reading
   
 \begin{verbatim}
+to interpret a superlative sentence: 
+
+Version 1
+first figure out ass'n rel'n via focus;
+that gives you c.s. + m.e.; (by abstracting over their positions -
+focus for the contrast set, and superlative phrase for the m.e.) 
+     BUT if there is no focus, then a.r. defaults to =;
+     = can't give you c.s. or m.e.; therefore
+           you default to the NOUN's extension (some subset thereof)
+           to give you both c.s. + m.e. and you then get an absolute
+           reading;
+           BUT if you cannot default to the noun b/c there is no noun
+           (as is the case w adverbials and predicative),
+                THEN you cannot use = as a.r.; 
+                AND therefore cannot get an absolute reading
+
+Version 2
+first figure out ass'n rel'n via focus;
+that gives you c.s. + m.e.; (by abstracting over their positions -
+focus for the contrast set, and superlative phrase for the m.e.) 
+     BUT if there is no focus, then a.r. defaults to =;
+     = can't give you c.s. or m.e.; therefore
+           you default to the HEAD's extension (some subset thereof)
+           to give you both c.s. + m.e. and you then get an absolute
+           reading
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Getting a relative reading for John_F drove (the) fastest with the recipe:
 
 John is focused. Abstract over ``drive fastest'' to get other slot.
@@ -204,6 +215,7 @@ measure (type <d,vt>) = e is d-fast
 and for all distinct elements of the contrast set, 
 the driving events that they are the agent of are not as fast as e.
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Getting a relative reading for John_F climbed (the) highest mountain with the recipe:
 
 John is focused. Abstract over ``the highest mountain'' to get other slot.
@@ -216,7 +228,108 @@ measure (type <d,et>) = x is d-tall
 and for all distinct elements of the contrast set, 
 the mountains that they climbed are not as tall as x.
 
-TODO: Show that the recipe doesn't work for absolute readings of adverbials.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TODO: Show that the recipe doesn't work for absolute readings of
+adverbials.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Version 2 absolute reading
+
+
+Version 2
+first figure out ass'n rel'n via focus;
+that gives you c.s. + m.e.; (by abstracting over their positions -
+focus for the contrast set, and superlative phrase for the m.e.) 
+     BUT if there is no focus, then a.r. defaults to =;
+     = can't give you c.s. or m.e.; therefore
+           you default to the HEAD's extension (some subset thereof)
+           to give you both c.s. + m.e. and you then get an absolute
+           reading
+
+Step 1: Nothing is focussed so a.r. defaults to =
+HEAD's extension = [[drive]] -- a property of events
+c.s. and m.e.s are a relevant subset of this. (driving events)
+Measure is speed of event.
+
+==...==> There is a driving event x that John is the agent of
+and for all distinct elements of the contrast set, 
+their speed is not as great as x.
+
+This would be true in a situation with many driving events that John
+is the agent of, e.g.
+
+John drove 30mph
+John drove 40mph
+John drove 50mph
+
+Therefore "John drove fastest".
+
+In this case, the condition that there are multiple entities in the
+contrast set is satisfied by the different events with the same agent.
+
+This is bad.
+But we can rule it out with a constraint on the contrast set that says
+that it can't be too abstract.
+
+Degrees are possibly OK; this could explain upstairs de dicto readings
+John's desires are directed at a degree. (measure = identity)
+
+How do we formulate this in a way that is not circular?
+Can you have a mass noun in the contrast set?
+
+This water is home to the most sea life.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Version 1
+first figure out ass'n rel'n via focus;
+that gives you c.s. + m.e.; (by abstracting over their positions -
+focus for the contrast set, and superlative phrase for the m.e.) 
+     BUT if there is no focus, then a.r. defaults to =;
+     = can't give you c.s. or m.e.; therefore
+           you default to the NOUN's extension (some subset thereof)
+           to give you both c.s. + m.e. and you then get an absolute
+           reading;
+           BUT if you cannot default to the noun b/c there is no noun
+           (as is the case w adverbials and predicative),
+                THEN you cannot use = as a.r.; 
+                AND therefore cannot get an absolute reading
+
+Step 1: Nothing is focussed so a.r. defaults to =
+Therefore you default to the NOUN's extension.
+There is no noun. So we have no c.s.
+Boom.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TOMORROW
+
+Nobody has done anything on superlative adverbs
+(Krasikova mentioned it as an outstanding puzzle)
+
+Here's all this interesting data
+- the position
+- optionality of the determiner
+- missing readings:
+John drove the fastest =/= John drove the fastest relevant (driving)
+event/speed. There have to be other agents, not OK if John's the only
+drivers.
+ALT: You can't say "John drove the fastest" if there aren't other
+people who drove (ignoring reading comparing driving to other types of
+events)
+vs. you can say "John climbed the highest mountain" if there aren't
+other people who climbed mountains.
+
+Comparison with predicative superlatives.
+Tell me about Usain Bolt.
+Usain Bolt is a 33 year old runner from Jamaica. He is the fastest.
+
+
+Ingredients: contrast set, assoc reln, measured entities, measure,
+domain
+
+Recipe: HEAD version
+
+Ruling out absolute reading: constraints on contrast set
+
 \end{verbatim}
 
 % A proportional reading of an amount superlative would be:
