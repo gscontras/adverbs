@@ -1,0 +1,15 @@
+*.toc
+
+*.log
+
+*.dvi
+
+*.blg
+
+*.bbl
+
+*.results
+
+*.Rhistory
+
+*.pdf
