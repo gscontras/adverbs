@@ -1,0 +1,160 @@
+\makeatletter
+     
+\edef\@backslash{\expandafter\@car\string\relax\@nil}
+     
+\def\@warnredef#1{\typeout{WARNING: The `#1' control sequence is being
+ redefined.}}
+     
+\def\@warnnoredef#1{\typeout{WARNING: Aborting redefinition of the `#1' control
+ sequence.}}
+     
+\def\@ifcsundefined#1#2#3{\ifx #1\anUndefinedMacro
+   \def\@@temp{#2}\else\ifx #1\relax\def\@@temp{#2}\else
+   \def\@@temp{#3}\fi\fi\@@temp}
+     
+% Change LaTex behavior.
+     
+\def\@notdefinable{\@warnredef{\@backslash\@tempa}}
+     
+% Define \redefcheck{\ctlseq} that just checks the sequence
+% and ignores it.
+     
+\def\redefcheck#1{\@ifcsundefined#1{}{\@warnredef{\string#1}}}
+     
+% \redefabort{\oneargdefiner}{\ctlseq} puts out \oneargdefiner\ctlseq,
+% except that if \ctlseq is already defined, it just gobbles both
+% of them.
+     
+\def\redefabort#1#2{\@ifcsundefined#2{#1#2}{\@warnnoredef{\string#2}}}
+     
+% Define \newdef = \def with \redefcheck, and similarly for \gdef and \let.
+     
+\def\newdef#1{\redefcheck{#1}\def#1}
+\def\newgdef#1{\redefcheck{#1}\gdef#1}
+\def\newlet#1{\redefcheck{#1}\let#1}
+     
+% Add redefinition checking to \newif.
+% \newif is declared as \outer, so we need to delay the definition
+% of \latexnewif until we've scanned the definition of the new
+% \newif.
+     
+\let\@tempa\newif
+\def\newif#1{\redefcheck{#1}\latexnewif#1}
+\let\latexnewif\@tempa
+     
+% Now for the allocation commands, which I'm setting up to skip the
+% redefinition if their target control sequences are already defined.
+% These are also declared \outer, but the above \@tempa trick won't work
+% here; it's necessary to use another level of macros.
+     
+\def\latexnewbox{\latexouternewbox}
+\let\latexouternewbox\newbox
+\def\newbox#1{\redefabort\latexnewbox{#1}}
+     
+\def\latexnewcount{\latexouternewcount}
+\let\latexouternewcount\newcount
+\def\newcount#1{\redefabort\latexnewcount{#1}}
+     
+\def\latexnewdimen{\latexouternewdimen}
+\let\latexouternewdimen\newdimen
+\def\newdimen#1{\redefabort\latexnewdimen{#1}}
+     
+\def\latexnewtoks{\latexouternewtoks}
+\let\latexouternewtoks\newtoks
+\def\newtoks#1{\redefabort\latexnewtoks{#1}}
+     
+\makeatother
+% end redefine
+    
+% A referenceable "sentences" list environment for Latex.  Remember to
+% put "{}" % after the \item command if the sentence begins with "[".
+% There is also a "subsentences" environment.
+     
+\makeatletter
+     
+\newif\ifinsentences
+\insentencesfalse
+     
+\newcounter{sentence}
+\newcounter{subsentence}[sentence]
+     
+% These next definitions define the format of the "sentence"
+% and "subsentence" counters.  It is tricky to get them right.
+% First of all, the parentheses in "(4)" and "(2iii)" are
+% defined to be part of the printed representation of the
+% "sentence" and "subsentence" counters.  This is so that
+% parentheses will be included in \ref - \label constructions.
+% Second, the "subsentence" counter must print out with the
+% "sentence" number included as well; this is similar to
+% what happens with the section and chapter counters.
+% Third, despite the second requirement, the "subsentence"
+% counter must appear without the sentence number when it
+% is actually used to number a subsentence.
+%
+% We use two auxiliary control sequences here and below in order
+% to make it easier to change the subsentence numbering style.
+% The two control sequences are \subsentencenumbering, which should
+% be \let to something like \roman or \alph, and
+% \subsentencepunctuation, which controls the format of subsentence
+% numbers as they appear before the subsentences.
+     
+\def\thesentence{(\arabic{sentence})}
+\def\thesubsentence{(\arabic{sentence}\subsentencenumbering{subsentence})}
+     
+% These next two definitions are defaults.
+     
+\let\subsentencenumbering\alph
+\def\subsentencepunctuation#1{#1.}
+     
+%%% Using \begin{list} and \end{list} in the argument of a
+%%% \newenvironment command doesn't work properly; I have to call
+%%% \list and \endlist directly.
+     
+\newenvironment{sentences}{\list{\thesentence}%
+{\edef\sent@nbr{\the\c@sentence}\usecounter{sentence}%
+\setcounter{sentence}{\sent@nbr}%
+\ifinsentences \errmessage{Nested sentences environment.} \fi
+\def\makelabel##1{##1\hfil}%
+% the following command prevents indention problems when the number of
+% sentences in the document falls in the set {99,...,999}
+% (R. E. Wargaski Jr., 31 Oct 89)
+\setlength{\leftmargin}{1.0cm}
+\leftmargin\leftmargin\labelwidth\leftmargin
+  \advance\labelwidth-\labelsep
+\insentencestrue}}{\endlist}
+     
+\newenvironment{subsentences}{\list
+{\subsentencepunctuation{\subsentencenumbering{subsentence}}}%
+{\edef\sent@nbr{\the\c@subsentence}\usecounter{subsentence}%
+\setcounter{subsentence}{\sent@nbr}%
+% the following command prevents indention problems when the number of
+% sentences in the document falls in the set {99,...,999}
+% (R. E. Wargaski Jr., 31 Oct 89)
+\setlength{\leftmargin}{1.0cm}
+\setlength{\rightmargin}{\leftmargin}
+\leftmargin\leftmargin\labelwidth\leftmargin
+  \advance\labelwidth-\labelsep
+\def\makelabel##1{##1\hfil}%
+\ifinsentences\relax\else
+   \errmessage{\string\begin{subsentences} not in sentences environment}\fi}}%
+{\endlist}
+\newcommand{\sentence}[1]{\begin{sentences}\item{#1}\end{sentences}}
+     
+\newdef\nextsentence{\@ifnextchar[{\@argnextsentence}{\@argnextsentence[1]}%]
+}
+     
+\newdef\@argnextsentence[#1]{\bgroup
+  \advance\c@sentence by #1\relax
+  \thesentence
+  \egroup}
+     
+\newdef\nextsentencesub{\@ifnextchar[{\@argnextsentencesub
+   }{\@argnextsentencesub[1]}%]
+}
+     
+\newdef\@argnextsentencesub[#1]#2{\bgroup
+  \advance\c@sentence by #1\relax
+  \c@subsentence=#2\relax
+  \thesubsentence
+  \egroup}
+

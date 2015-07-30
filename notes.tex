@@ -1,0 +1,240 @@
+\documentclass{article}
+\include{sem}
+\include{sentences-1file}
+\begin{document}
+
+\section{Anatomy of a relative reading}
+
+\sentence{John$_F$ climbed the highest mountain. [relative]}
+
+\begin{itemize}
+\item Contrast set: John and his focus-alternatives
+\item Association relation: $x$ climbed (mountain) $y$
+\item Measured entities: mountain 1, mountain 2, etc.
+\item Measure: $y$ is $d$-high 
+\item Domain of measured entities: mountain
+\end{itemize}
+
+\sentence{John climbed the highest mountain on Tuesday$_F$ [relative]}
+\begin{itemize}
+\item Contrast set: Tuesday and its focus alternatives (days)
+\item Association relation: John climbed (mountain) $y$ on $x$
+\item Measured entities: mountain 1, mountain 2, etc.
+\item Measure: $y$ is $d$-high
+\item Domain of measured entities: mountain
+\end{itemize}
+
+
+\sentence{John climbed the highest mountain. [absolute]}
+
+\begin{itemize}
+\item Contrast set: mountain 1, mountain 2, etc.
+\item Association relation: $x=y$
+\item Measured entities: mountain 1, mountain 2, etc.
+\item Measure: $y$ is $d$-high
+\item Domain of measured entities: mountain
+\end{itemize}
+
+
+In general, elements of the contrast set are related to elements of
+the measured entities via the association relation, and the measured
+entities are members of the domain.
+
+Suppose you are a computer asked to identify the pieces of a sentence
+containing a superlative. Then you can follow the following procedure.
+If there is no focus, then you have an absolute reading:
+\begin{itemize}
+\item The association relation is identity.
+\item The contrast set is given by the head noun.
+%the set of measured entities.
+\end{itemize}
+In the presence of focus,  you can have a relative or an absolute
+reading. For the relative reading:
+\begin{itemize}
+\item The association relation can be derived by
+abstracting over the focus and the noun phrase (more generally:
+smallest maximal projection) containing the superlative
+phrase. %cf. Farkas & Kiss argument against contextually given assoc relns
+\item The contrast set is (a contextually restricted
+  subset of) the focus alternatives.
+\item The measured entities are the members of the range of the
+  association relation (the set of $y$s such that $xRy$).
+\end{itemize}
+For the absolute reading: follow the procedure for the case where
+there is no focus.
+
+
+% to interpret a superlative sentence: 
+
+% first figure out ass'n rel'n via focus;
+% that gives you c.s. + m.e.; (by abstracting over their positions -
+% focus for the contrast set, and superlative phrase for the m.e.) 
+%      BUT if there is no focus, then a.r. defaults to =;
+%      = can't give you c.s. or m.e.; therefore
+%            you default to the NOUN's extension (some subset thereof)
+%            to give you both c.s. + m.e. and you then get an absolute
+%            reading;
+%            BUT if you cannot default to the noun b/c there is no noun
+%            (as is the case w adverbials and predicative),
+%                 THEN you cannot use = as a.r.; 
+%                 AND therefore cannot get an absolute reading
+           
+
+
+
+
+
+\section{Adverbial superlatives}
+
+\paragraph{Question:} Do adverbial superlatives have both absolute and relative readings?
+
+\paragraph{Answer:} They certainly seem have relative readings.
+
+\sentence{John$_F$ drove (the) fastest.\label{drove-the-fastest}}
+
+This looks like a relative reading either like this (\textbf{degree hypothesis}):
+\begin{itemize}
+\item Contrast set: John and his focus-alternatives.
+\item Association relation: $x$ ran $y$-fast
+\item Measured entities: running speed 1, running speed 2, etc.
+\item Measure: $y$ is $d$(-great)
+\item Domain of measured entities: speeds
+\end{itemize}
+or like this (\textbf{event hypothesis}):
+\begin{itemize}
+\item Contrast set: John and his focus-alternatives
+\item Association relation: $x$ is the agent of $y$
+\item Measured entities: running event 1, running event 2, etc.
+\item Measure: $y$ is $d$-fast
+\item Domain of measured entities: running events
+\end{itemize}
+What would an absolute reading look like? The association relation
+would be identity, so the contrast set is identical to the set of
+measured entities. 
+\begin{itemize}
+\item \textbf{Absolute reading (degree hypothesis)}\\
+John drove $y$-fast, and $y$ is greater in magnitude than all other
+speeds in the context.
+\item \textbf{Absolute reading (event hypothesis)}\\
+John was the agent of driving event $y$, and $y$ is faster than all
+other driving events in the context.
+\end{itemize}
+Prediction of degree hypothesis: \ref{tutor-fastest} should be
+possible, and mean the same thing as \ref{tutor-the-fastest-speed}.
+
+\sentence{John has a private driving tutor. The tutor says that John
+  can choose to drive 40mph, 50mph, or 60mph. John was unsure which
+  to choose, but in the end...
+\begin{subsentences}
+\item{...he drove the fastest speed.\label{tutor-the-fastest-speed}}
+\item{*...he drove fastest.\label{tutor-fastest}}
+\item{?...he drove the fastest.\label{tutor-the-fastest}}
+\item{...of the given speeds, he drove the
+    fastest.\label{tutor-the-fastest-of}}
+\end{subsentences}}
+
+Another prediction of the degree hypothesis, assuming an absolute
+reading cannot independently be ruled out, is that \ref{j+s-fastest}
+should have a non-contradictory reading, where John and Susie both
+drove the fastest of the contextually available speed.
+%
+\sentence{
+\begin{subsentences}
+\item{*John drove fastest. Susie did too.\label{j+s-fastest}}
+\item{?John drove the fastest. Susie did too.\label{j+s-the-fastest}}
+\item{Of all the speeds, John drove *(the) fastest. Susie did too.}
+\end{subsentences}}
+
+The event hypothesis does not predict \ref{tutor-fastest} to be
+felicitous on an absolute reading, because there is only one driving
+events in the context.
+
+Compositional derivation:
+
+\sentence{\textit{fast} $\leadsto \lambda e \lambda d \ldot \const{fast}(e,d)$}
+\sentence{\textit{-est}$_\theta$$\leadsto \lambda C_{\<e,t\>}\lambda
+  G_{\<d,\<e,t\>\>}\lambda x_\tau$\\$ \exists d [ G(x,d) \land \forall x'
+  [[C(x') \land x'\neq x] \rightarrow \neg G(x',d)] ]$\\
+`there is a degree to which $x$ is $G$ and no distinct $x'$ in $C$ is $G$'}
+
+\sentence{\textit{fastest}$_C$ $\leadsto \lambda x \ldot \exists d [ \const{fast}(x,d) \land \forall x'
+  [[C(x') \land x'\neq x] \rightarrow \neg \textsc{fast}(x',d)] ] $}
+
+\sentence{\textit{drove} $\leadsto \lambda e \ldot \const{driving}(e)$}
+
+\sentence{\textit{drove fastest} $\leadsto \lambda x \ldot
+  \const{driving}(x) \land  \exists d [ \const{fast}(x,d) \land \forall x'
+  [[C(x') \land x'\neq x] \rightarrow \neg \textsc{fast}(x',d)] ] $}
+
+\sentence{\textit{$\exists$ [\textsc{ag} John] drove fastest} \\
+ $\leadsto\exists x \ldot \const{ag}(x,\const{j}) \land
+  \const{driving}(x) \land  \exists d [ \const{fast}(x,d) \land \forall x'
+  [[C(x') \land x'\neq x] \rightarrow \neg \textsc{fast}(x',d)] ] $
+}
+
+%%%%
+
+
+
+% to interpret a superlative sentence: 
+
+% first figure out ass'n rel'n via focus;
+% that gives you c.s. + m.e.; (by abstracting over their positions -
+% focus for the contrast set, and superlative phrase for the m.e.) 
+%      BUT if there is no focus, then a.r. defaults to =;
+%      = can't give you c.s. or m.e.; therefore
+%            you default to the NOUN's extension (some subset thereof)
+%            to give you both c.s. + m.e. and you then get an absolute
+%            reading;
+%            BUT if you cannot default to the noun b/c there is no noun
+%            (as is the case w adverbials and predicative),
+%                 THEN you cannot use = as a.r.; 
+%                 AND therefore cannot get an absolute reading
+  
+\begin{verbatim}
+Getting a relative reading for John_F drove (the) fastest with the recipe:
+
+John is focused. Abstract over ``drive fastest'' to get other slot.
+Association relation = x is agent of (driving event) e.
+Therefore c.s. = [[John]]^F
+m.e.s = driving event 1, 2, 3... (where agent is among c.s.)
+measure (type <d,vt>) = e is d-fast
+
+==...==> There is a driving event e that John is the agent of
+and for all distinct elements of the contrast set, 
+the driving events that they are the agent of are not as fast as e.
+
+Getting a relative reading for John_F climbed (the) highest mountain with the recipe:
+
+John is focused. Abstract over ``the highest mountain'' to get other slot.
+Association relation = x climbed y.
+Therefore c.s. = [[John]]^F
+m.e.s = climbed mountains 1, 2, 3... (where climber is among c.s.)
+measure (type <d,et>) = x is d-tall
+
+==...==> There is a mountain x that John climbed
+and for all distinct elements of the contrast set, 
+the mountains that they climbed are not as tall as x.
+
+TODO: Show that the recipe doesn't work for absolute readings of adverbials.
+\end{verbatim}
+
+% A proportional reading of an amount superlative would be:
+
+% \sentence{John mostly laughed.}
+
+% \sentence{*John leastly laughed.}
+
+% Consonant with general observation that negative amount superlatives ({\em least}, {\em fewest}) do not have proportional (smallest part of partition) readings.
+
+% \paragraph{Syntactic reststriction}
+
+% \sentence{*John (the) fastest drove.}
+
+% \paragraph{Morphological restrictions}
+
+% {\em lastly}, {\em *prettiestly}, {\em *quickestly}...
+
+% Periphrastic: {\em most elegantly}
+
+\end{document}
