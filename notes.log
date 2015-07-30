@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.7.5)  30 JUL 2015 11:49
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.7.5)  30 JUL 2015 12:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -365,76 +365,196 @@ LaTeX Font Info:    Try loading font information for U+stmry on input line 8.
 
 
 {/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Overfull \hbox (1.49698pt too wide) in paragraph at lines 219--219
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 333--333
 []\OT1/cmtt/m/n/10 that gives you c.s. + m.e.; (by abstracting over their posit
 ions -[] 
  []
 
 [3]
-Overfull \hbox (11.99689pt too wide) in paragraph at lines 219--219
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 333--333
 []           \OT1/cmtt/m/n/10 you default to the NOUN's extension (some subset 
 thereof)[] 
  []
 
 
-Overfull \hbox (11.99689pt too wide) in paragraph at lines 219--219
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 333--333
 []           \OT1/cmtt/m/n/10 to give you both c.s. + m.e. and you then get an 
 absolute[] 
  []
 
 
-Overfull \hbox (17.24684pt too wide) in paragraph at lines 219--219
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 333--333
 []           \OT1/cmtt/m/n/10 BUT if you cannot default to the noun b/c there i
 s no noun[] 
  []
 
 
-Overfull \hbox (43.49661pt too wide) in paragraph at lines 219--219
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 333--333
+[]\OT1/cmtt/m/n/10 that gives you c.s. + m.e.; (by abstracting over their posit
+ions -[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 333--333
+[]           \OT1/cmtt/m/n/10 you default to the HEAD's extension (some subset 
+thereof)[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 333--333
+[]           \OT1/cmtt/m/n/10 to give you both c.s. + m.e. and you then get an 
+absolute[] 
+ []
+
+
+Overfull \hbox (43.49661pt too wide) in paragraph at lines 333--333
 []\OT1/cmtt/m/n/10 Getting a relative reading for John_F drove (the) fastest wi
 th the recipe:[] 
  []
 
 
-Overfull \hbox (6.74693pt too wide) in paragraph at lines 219--219
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 333--333
 []\OT1/cmtt/m/n/10 John is focused. Abstract over ``drive fastest'' to get othe
 r slot.[] 
  []
 
 
-Overfull \hbox (6.74693pt too wide) in paragraph at lines 219--219
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 333--333
 []\OT1/cmtt/m/n/10 the driving events that they are the agent of are not as fas
 t as e.[] 
  []
 
 
-Overfull \hbox (101.24611pt too wide) in paragraph at lines 219--219
+Overfull \hbox (101.24611pt too wide) in paragraph at lines 333--333
 []\OT1/cmtt/m/n/10 Getting a relative reading for John_F climbed (the) highest 
 mountain with the recipe:[] 
  []
 
 
-Overfull \hbox (43.49661pt too wide) in paragraph at lines 219--219
+Overfull \hbox (43.49661pt too wide) in paragraph at lines 333--333
 []\OT1/cmtt/m/n/10 John is focused. Abstract over ``the highest mountain'' to g
 et other slot.[] 
  []
 
 
-Overfull \hbox (1.49698pt too wide) in paragraph at lines 219--219
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 333--333
 []\OT1/cmtt/m/n/10 m.e.s = climbed mountains 1, 2, 3... (where climber is among
  c.s.)[] 
  []
 
-
-Overfull \hbox (53.99652pt too wide) in paragraph at lines 219--219
-[]\OT1/cmtt/m/n/10 TODO: Show that the recipe doesn't work for absolute reading
-s of adverbials.[] 
+[4]
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 333--333
+[]\OT1/cmtt/m/n/10 that gives you c.s. + m.e.; (by abstracting over their posit
+ions -[] 
  []
 
-[4] (./notes.aux) ) 
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 333--333
+[]           \OT1/cmtt/m/n/10 you default to the HEAD's extension (some subset 
+thereof)[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 333--333
+[]           \OT1/cmtt/m/n/10 to give you both c.s. + m.e. and you then get an 
+absolute[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 333--333
+[]\OT1/cmtt/m/n/10 This would be true in a situation with many driving events t
+hat John[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 333--333
+[]\OT1/cmtt/m/n/10 In this case, the condition that there are multiple entities
+ in the[] 
+ []
+
+
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 333--333
+[]\OT1/cmtt/m/n/10 contrast set is satisfied by the different events with the s
+ame agent.[] 
+ []
+
+
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 333--333
+[]\OT1/cmtt/m/n/10 But we can rule it out with a constraint on the contrast set
+ that says[] 
+ []
+
+[5]
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 333--333
+[]\OT1/cmtt/m/n/10 Degrees are possibly OK; this could explain upstairs de dict
+o readings[] 
+ []
+
+
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 333--333
+[]\OT1/cmtt/m/n/10 that gives you c.s. + m.e.; (by abstracting over their posit
+ions -[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 333--333
+[]           \OT1/cmtt/m/n/10 you default to the NOUN's extension (some subset 
+thereof)[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 333--333
+[]           \OT1/cmtt/m/n/10 to give you both c.s. + m.e. and you then get an 
+absolute[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 333--333
+[]           \OT1/cmtt/m/n/10 BUT if you cannot default to the noun b/c there i
+s no noun[] 
+ []
+
+
+Overfull \hbox (11.99689pt too wide) in paragraph at lines 333--333
+[]\OT1/cmtt/m/n/10 John drove the fastest =/= John drove the fastest relevant (
+driving)[] 
+ []
+
+
+Overfull \hbox (17.24684pt too wide) in paragraph at lines 333--333
+[]\OT1/cmtt/m/n/10 event/speed. There have to be other agents, not OK if John's
+ the only[] 
+ []
+
+
+Overfull \hbox (22.4968pt too wide) in paragraph at lines 333--333
+[]\OT1/cmtt/m/n/10 people who drove (ignoring reading comparing driving to othe
+r types of[] 
+ []
+
+[6]
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 333--333
+[]\OT1/cmtt/m/n/10 vs. you can say "John climbed the highest mountain" if there
+ aren't[] 
+ []
+
+
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 333--333
+[]\OT1/cmtt/m/n/10 Usain Bolt is a 33 year old runner from Jamaica. He is the f
+astest.[] 
+ []
+
+
+Overfull \hbox (1.49698pt too wide) in paragraph at lines 333--333
+[]\OT1/cmtt/m/n/10 Ingredients: contrast set, assoc reln, measured entities, me
+asure,[] 
+ []
+
+[7] (./notes.aux) ) 
 Here is how much of TeX's memory you used:
  5095 strings out of 493315
  64962 string characters out of 6137905
- 98927 words of memory out of 5000000
+ 99927 words of memory out of 5000000
  8509 multiletter control sequences out of 15000+600000
  12941 words of font info for 46 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -455,10 +575,10 @@ r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
 local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/l
 ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/lo
 cal/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on notes.pdf (4 pages, 154762 bytes).
+Output written on notes.pdf (7 pages, 160088 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
- 56 compressed objects within 1 object stream
+ 85 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
