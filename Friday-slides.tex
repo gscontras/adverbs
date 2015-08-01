@@ -49,7 +49,13 @@
 
 \frame{\titlepage}
 
-\section{Adverbial superlatives}
+\section{Topic}
+
+\begin{frame}{Adjectival superlatives}
+
+\ex. John climbed the highest mountain.
+
+\end{frame}
 
 \begin{frame}{Adverbial superlatives}
 
@@ -57,32 +63,39 @@
 
 Questions:
 \begin{itemize}
-\item Why can we have {\em the} (in English) (but not German)? 
-\item Is it freely insertable and if so why?
+\item Why can we have {\em the} (in English) (but not Swedish)? \\
+(There's no noun.)
+\item Is {\em the} freely insertable and if so why?
 \item Do adverbial superlatives have both absolute and relative
-  readings?
+  readings, like adnominal ones?
 \item How to analyze the elements involved? Do adverbial superlatives
   help to decide between analyses of adjectival superlatives?
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Previous work}
-\citet{krasikova:2012}:
+% \section{Previous work}
 
-\begin{itemize}
-\item ``One of the two remaining issues to be addressed is the
-  optionality of {\em the} in adverbial and predicative
-  superlatives.'' Predicative superlative:
+% \begin{frame}{Previous work}
 
-\ex. John is (the) smartest.
 
-\item ``Under the present analysis, both an absolute and a
-  comparative construal are possible in such cases and derive the same
-  truth conditions.''
-\end{itemize}
+% \begin{itemize}
+% \item Lots of stuff on adnominal superlatives.
+% \item \citet{krasikova:2012}:
+% ``One of the two remaining issues to be addressed is the
+%   optionality of {\em the} in adverbial and predicative
+%   superlatives.'' Predicative superlative:
 
-\end{frame}
+% \ex. John is (the) smartest.
 
+% {\footnotesize (cf.\ \citealt{matushansky:2008})}
+% \item ``Under the present analysis, both an absolute and a
+%   comparative construal are possible in such cases and derive the same
+%   truth conditions.''
+% \end{itemize}
+
+% \end{frame}
+
+\section{Data}
 
 \begin{frame}{Syntactic restrictions}
 
@@ -109,17 +122,22 @@ Questions:
 
 \begin{frame}{Cf.\ relative readings of adnominal superlatives}
 
-\ex. {Of her 3 sisters, [Jean]$_F$ bought the most expensive
-  book. \label{deg-rel}}
+\ex. John$_F$ climbed the highest mountain on Tuesday.
 
-\ex. {There was the least snow on [Tuesday]$_F$. \label{snow}}
+\ex. John climbed the highest mountain on Tuesday$_F$.
 
-\ex. {Who received the fewest letters? \label{wh}}
 
-\ex. {The one who receives the most votes wins. \label{rel}}
+% \ex. {Of her 3 sisters, [Jean]$_F$ bought the most expensive
+%   book. \label{deg-rel}}
 
-\ex. {A: How do you win this contest?\\B: By [ PRO putting the tallest
-  plant on the table ]. \label{pro}}
+% \ex. {There was the least snow on [Tuesday]$_F$. \label{snow}}
+
+% \ex. {Who received the fewest letters? \label{wh}}
+
+% \ex. {The one who receives the most votes wins. \label{rel}}
+
+% \ex. {A: How do you win this contest?\\B: By [ PRO putting the tallest
+%   plant on the table ]. \label{pro}}
 
 \end{frame}
 
@@ -154,7 +172,7 @@ Questions:
 \draw[-latex,purple] (d1) -- (r1);
 \draw[-latex,purple] (d1) -- (r2);
 \draw[-latex,purple] (d2) -- (r2);
-\draw[-latex,purple] (d3) -- (r3);
+\draw[-latex,purple] (d2) -- (r3);
 \draw[-latex,purple] (d3) -- (r4);
 
 
@@ -169,8 +187,8 @@ Questions:
 
 \end{frame}
 
-\begin{frame}{\textcolor{blue}{John}$_F$ \textcolor{purple}{climbed}
-    the \textcolor{orange}{high}est \textcolor{ForestGreen}{mountain}:
+\begin{frame}{{\em \textcolor{blue}{John}$_F$ \textcolor{purple}{climbed}
+    the \textcolor{orange}{high}est \textcolor{ForestGreen}{mountain}}:
   Relative reading}
 
 \begin{center}
@@ -200,7 +218,7 @@ Questions:
 \draw[-latex,purple] (d1) -- (r1);
 \draw[-latex,purple] (d1) -- (r2);
 \draw[-latex,purple] (d2) -- (r2);
-\draw[-latex,purple] (d3) -- (r3);
+\draw[-latex,purple] (d2) -- (r3);
 \draw[-latex,purple] (d3) -- (r4);
 
 
@@ -211,15 +229,17 @@ Questions:
 
 
 \end{tikzpicture}
+
+$\Rightarrow$ John climbed a higher mountain than anyone else.
 \end{center}
 
 \end{frame}
 
 
 
-\begin{frame}{\textcolor{purple}{John climbed}
+\begin{frame}{{\em \textcolor{purple}{John climbed}
     the \textcolor{orange}{high}est \textcolor{ForestGreen}{mountain}
-    \textcolor{purple}{on} \textcolor{blue}{Tuesday}}
+    \textcolor{purple}{on} \textcolor{blue}{Tuesday}}}
 
 \begin{center}
 \begin{tikzpicture}
@@ -248,7 +268,7 @@ Questions:
 \draw[-latex,purple] (d1) -- (r1);
 \draw[-latex,purple] (d1) -- (r2);
 \draw[-latex,purple] (d2) -- (r2);
-\draw[-latex,purple] (d3) -- (r3);
+\draw[-latex,purple] (d2) -- (r3);
 \draw[-latex,purple] (d3) -- (r4);
 
 
@@ -259,43 +279,53 @@ Questions:
 
 
 \end{tikzpicture}
+
+$\Rightarrow$ J.\ climbed a higher mountain on Tuesday than any other
+day.
 \end{center}
 
 \end{frame}
 
-\begin{frame}{Computing a relative reading (requires focus)}
-\begin{itemize}
-\item The \textcolor{orange}{measure} is whatever {\em -est} attaches
-  to. \pause
-\item The \textcolor{purple}{association relation} (e.g.\ \textcolor{purple}{$x$ climbed $y$}) can be derived by
-abstracting over the focus (e.g.\ \textcolor{blue}{John}) and the XP containing the both the superlative
-expression and the property it modifies (e.g.\ the
-\textcolor{orange}{high}est \textcolor{ForestGreen}{mountain}). \pause
-\item The \textcolor{blue}{contrast set} is (a contextually restricted
-  subset of) the focus alternatives. \pause
-\item The \textcolor{ForestGreen}{measured entities} are the members of the range of the
-  association relation (the set of $y$s such that $xRy$). They are
-  drawn from a \textcolor{ForestGreen}{domain} given by the phrase the
-  superlative expression modifies. \pause
-\end{itemize}
-\end{frame}
+% \begin{frame}{Computing a relative reading (requires focus)}
+% \begin{itemize}
+% \item The \textcolor{orange}{measure} is whatever {\em -est} attaches
+%   to. \pause
+% \item The \textcolor{purple}{association relation} (e.g.\ \textcolor{purple}{$x$ climbed $y$}) can be derived by
+% abstracting over the focus (e.g.\ \textcolor{blue}{John}) and the XP containing the both the superlative
+% expression and the property it modifies (e.g.\ the
+% \textcolor{orange}{high}est \textcolor{ForestGreen}{mountain}). \pause
+% \item The \textcolor{blue}{contrast set} is (a contextually restricted
+%   subset of) the focus alternatives. \pause
+% \item The \textcolor{ForestGreen}{measured entities} are the members of the range of the
+%   association relation (the set of $y$s such that $xRy$). They are
+%   drawn from a \textcolor{ForestGreen}{domain} given by the phrase the
+%   superlative expression modifies. 
+% \end{itemize}
+% \end{frame}
 
 \begin{frame}{Calculating truth conditions}
 
 One way to do things:
 \begin{itemize}
 \item The superlative XP (e.g.\ {\em the highest mountain}) picks
-  out the measured entity whose measure is
-greater than that of any associate of any alternative to the focus in the contrast set.
+  out a measured entity whose measure is
+greater than that of any associate of any alternative to the focus in
+the contrast set.\footnote{\citealt{coppock+beaver:salt2014};
+  cf. \citealt{heim:1999}, \citealt{hackl:2009},
+\citealt{sharvit+stateva:2002}, \citealt{krasikova:2012},
+\citealt{gawron:1995}, \citealt{farkas+kiss:2000},
+\citealt{gutierrez-rexach:2006}, \citealt{teodorescu:2009}}
 \item Truth conditions for {\em John$_F$ climbed the highest mountain}:\\
 John climbed a mountain that is higher than any mountain
 climbed by any alternative to John.
 \end{itemize}
 
+
+
 \end{frame}
 
-\begin{frame}{\textcolor{blue}{John}$_F$ \textcolor{ForestGreen}{drove}
-    the \textcolor{orange}{fast}est:
+\begin{frame}{{\em \textcolor{blue}{John}$_F$ \textcolor{ForestGreen}{drove}
+    the \textcolor{orange}{fast}est}:
   Relative reading}
 
 \begin{center}
@@ -325,7 +355,7 @@ climbed by any alternative to John.
 \draw[-latex,purple] (d1) -- (r1);
 \draw[-latex,purple] (d1) -- (r2);
 \draw[-latex,purple] (d2) -- (r2);
-\draw[-latex,purple] (d3) -- (r3);
+\draw[-latex,purple] (d2) -- (r3);
 \draw[-latex,purple] (d3) -- (r4);
 
 
@@ -336,14 +366,40 @@ climbed by any alternative to John.
 
 
 \end{tikzpicture}
+
+$\Rightarrow$ John's driving event is faster than anyone else's.
 \end{center}
+
+
 
 \end{frame}
 
 
 
 
-\begin{frame}{John climbed the highest mountain: Absolute reading}
+
+
+%\node[fit=(r1) (r2) (r3) (r4),ellipse,draw,minimum width=1.5cm},draw=ForestGreen] {}; 
+
+
+% \begin{frame}{Computing an absolute reading}
+% \begin{itemize}
+% \item The \textcolor{orange}{measure} is whatever {\em -est} attaches to.
+% \item The \textcolor{purple}{association relation} is {\em equality}.
+% \item The \textcolor{blue}{contrast set} collapses with the set of
+%   measured entities.
+% \item The \textcolor{ForestGreen}{measured entities} are
+%   drawn from a \textcolor{ForestGreen}{domain} given by the phrase the
+%   superlative expression modifies.
+% \end{itemize}
+
+% Superlative phrase picks out the entity with the greatest
+% measure among the measured entities.
+
+% \end{frame}
+
+
+\begin{frame}{{\em John climbed the highest mountain}: Absolute reading}
 
 \begin{center}
 \begin{tikzpicture}
@@ -381,27 +437,9 @@ climbed by any alternative to John.
 
 
 \end{tikzpicture}
+
+$\Rightarrow$ John climbed Mt. Everest.
 \end{center}
-
-\end{frame}
-
-
-%\node[fit=(r1) (r2) (r3) (r4),ellipse,draw,minimum width=1.5cm},draw=ForestGreen] {}; 
-
-
-\begin{frame}{Computing an absolute reading}
-\begin{itemize}
-\item The \textcolor{orange}{measure} is whatever {\em -est} attaches to.
-\item The \textcolor{purple}{association relation} is {\em equality}.
-\item The \textcolor{blue}{contrast set} collapses with the set of
-  measured entities.
-\item The \textcolor{ForestGreen}{measured entities} are
-  drawn from a \textcolor{ForestGreen}{domain} given by the phrase the
-  superlative expression modifies.
-\end{itemize}
-
-Superlative phrase picks out the entity with the greatest
-measure among the measured entities.
 
 \end{frame}
 
@@ -412,15 +450,19 @@ measure among the measured entities.
 
 Two imaginable absolute readings:
 \begin{itemize}
-\item John was the agent of running event $e$, and $e$ had a speed
-  that was greater than all other speeds in the context.
-\item John was the agent of running event $e$, and $e$ was faster than
-  all other running events in the context.
+\item Compare degrees/speeds:\\
+The speed of John's running was greater than all other (relevant) speeds.
+%John was the agent of running event $e$, and $e$ had a speed
+ % that was greater than all other speeds in the context.
+\item Compare events:\\
+John's running event was faster than all other (relevant) running events.
+%John was the agent of running event $e$, and $e$ was faster than
+%  all other running events in the context.
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{John drove the fastest: Absolute reading (I)}
+\begin{frame}{{\em John drove the fastest}: Absolute reading (I)}
 
 \begin{center}
 \begin{tikzpicture}
@@ -458,6 +500,8 @@ Two imaginable absolute readings:
 
 
 \end{tikzpicture}
+
+$\Rightarrow$ John drove the fastest of the relevant speeds.
 \end{center}
 
 \end{frame}
@@ -479,7 +523,7 @@ Two imaginable absolute readings:
 \end{frame}
 
 
-\begin{frame}{John drove the fastest: Absolute reading (II)}
+\begin{frame}{{\em John drove the fastest}: Absolute reading (II)}
 
 \begin{center}
 \begin{tikzpicture}
@@ -517,6 +561,8 @@ Two imaginable absolute readings:
 
 
 \end{tikzpicture}
+
+$\Rightarrow$ John's driving was faster than all others' driving.
 \end{center}
 
 \end{frame}
@@ -535,14 +581,21 @@ modes of transportation).
 
 \end{frame}
 
+\section{Final words}
+
 \begin{frame}{Where we are}
 
 \begin{itemize}
 \item Adverbial superlatives do not have absolute readings.
-\item Why? Perhaps the contrast set must consist of suitably
+\item Why? 
+\begin{itemize}
+\item Perhaps the contrast set must consist of suitably
   individuable entities. Events are not suitably individuable.
+\item Or is it related to the lack of a noun?
+\end{itemize}
 \item Question: Do predicative superlatives have absolute readings? Do
   they have relative readings?
+\item Is the definite article predicted on any theory?
 \end{itemize}
 
 \end{frame}
@@ -550,6 +603,7 @@ modes of transportation).
 
 
 \begin{frame}
+\tiny
 \bibliographystyle{sp}
 \bibliography{master}
 \end{frame}
